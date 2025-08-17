@@ -1,0 +1,381 @@
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Body & Theme ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #080f26;
+    color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Header ===== */
+header.top {
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #111;
+    border-bottom: 2px solid #333;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+@media (min-width: 769px) {
+    .top-right {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+/* Right section of top bar (Sign in, Sign up) */
+.top-right {
+    gap: 10px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+.bottle-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.head-t-d {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* ===== Navigation ===== */
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-nav a:hover,
+.header-nav a:focus {
+    background-color: #10b981;
+    color: #000;
+    outline: none;
+}
+
+.header-nav a.active {
+    background-color: #2563eb;
+}
+
+/* ===== Auth Container ===== */
+.auth-container {
+    margin-top: 2rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+/* ===== Left Panel ===== */
+.auth-left {
+    width: 40%;
+    min-width: 260px;
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    text-align: left;
+}
+
+.auth-logo {
+    height: 5rem;
+    width: 5rem;
+}
+
+/* ===== Auth Card (Form) ===== */
+.auth-card {
+    width: 40%;
+    min-width: 300px;
+    background-color: #12172b;
+    color: #ddd;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.6);
+}
+
+/* ===== Headings ===== */
+.auth-card h2 {
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.4rem;
+}
+
+/* ===== Form Elements ===== */
+.auth-card label {
+    display: block;
+    font-size: 0.95rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0.35rem;
+    color: #cfcfcf;
+}
+
+.auth-card input[type="text"],
+.auth-card input[type="email"],
+.auth-card input[type="password"] {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: none;
+    background: #0f1628;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* Password field with show button */
+.password-field {
+    position: relative;
+}
+
+.password-field .show-password {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    height: calc(100% - 12px);
+    border: none;
+    background: transparent;
+    padding: 0 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #cfcfcf;
+}
+
+/* Buttons */
+.btn-auth {
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 18px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    width: 100%;
+    background: #1a1f33;
+    color: white;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.btn-auth:hover {
+    transform: translateY(-3px);
+}
+
+.btn-auth.primary {
+    background: rgb(203, 47, 47);
+    color: white;
+    font-weight: 600;
+}
+
+.btn-auth.social {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #dcdcdc;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    height: 5rem;
+    padding-top: 1rem;
+}
+
+.footer .align {
+    text-align: center;
+}
+
+/* ===== RESPONSIVENESS ===== */
+
+/* Large desktops / ultrawide */
+@media (min-width: 1600px) {
+
+    .auth-card,
+    .auth-left {
+        width: 30%;
+    }
+}
+
+/* Laptops and small desktops */
+@media (max-width: 1200px) {
+
+    .auth-left,
+    .auth-card {
+        width: 45%;
+    }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    /* .header-nav {
+        
+    } */
+    .auth-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .auth-left,
+    .auth-card {
+        width: 90%;
+        text-align: center;
+    }
+
+    .auth-left {
+        order: 1;
+    }
+
+    .auth-card {
+        order: 2;
+    }
+}
+
+/* Large phones */
+@media (max-width: 768px) {
+
+    .header-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        /* dropdown now appears below icon */
+        right: 0;
+        width: 200px;
+        flex-direction: column;
+        background-color: #1e1e2f;
+        border: 1px solid #333;
+        z-index: 999;
+    }
+
+    /* Dropdown visible */
+    .header-nav.show {
+        display: flex;
+    }
+
+    #drop-hide {
+        display: none;
+    }
+
+    .header-nav ul {
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* Remove Sign in/Sign up from dropdown */
+    .header-nav ul li.auth-link {
+        display: none;
+    }
+
+    /* Arrange top bar */
+    .top {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: auto;
+    }
+
+    .top-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    /* Menu toggle (hamburger) positioning */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Buttons remain visible on the right */
+    .nav-btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .head-t-d {
+        font-size: 1rem;
+    }
+
+    .auth-card,
+    .auth-left {
+        padding: 1.5rem;
+    }
+}
+
+/* Standard Android/iPhones */
+@media (max-width: 576px) {
+    header.top {
+        flex-direction: column;
+        gap: 0.5rem;
+        height: auto;
+    }
+
+    .auth-card,
+    .auth-left {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .auth-card h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+    .auth-card input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .btn-auth {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}

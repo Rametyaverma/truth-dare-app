@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign In — Truth Or Dare</title>
+
+  <!-- reuse your main site css for header/layout -->
+  <!-- <link rel="stylesheet" href="index.css" /> -->
+  <!-- auth specific styles (below) -->
+  <link rel="stylesheet" href="auth.css" />
+  <!-- fontawesome used by your site -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- top header (same structure as your existing pages) -->
+  <header class="top" style="margin-top: -1.3rem;">
+    <div class="top-left">
+      <img src="logobottle.png" alt="logo" class="bottle-logo" />
+      <p class="head-t-d">Truth Or Dare Online</p>
+    </div>
+    <div class="top-right">
+
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="normal.html">Play</a></li>
+        <li><a href="#">Truth or Dares</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- main container: reuses your .container layout -->
+  <main class="container auth-container">
+    <section class="auth-left">
+
+      <h1 style="font-size: 3rem; text-align: center; color: rgb(241, 39, 39); font-weight: 500;">Welcome back!</h1>
+      <p>Sign in to continue playing Truth or Dare with your friends.</p>
+      <p class="muted">Don't have an account? <a href="signup.html" class="link">Create one</a></p>
+    </section>
+
+    <section class="auth-card">
+      <h2 style="color: red; font-size: 3rem; font-weight: 500;">Sign In</h2>
+
+      <form id="signinForm" novalidate>
+        <label for="signin-identity">Email or Username</label>
+        <input id="signin-identity" name="identity" type="text" autocomplete="username" required
+          style="background-color: rgb(35, 35, 53);" />
+
+        <label for="signin-password">Password</label>
+        <div class="password-field">
+          <input id="signin-password" name="password" type="password" autocomplete="current-password" required
+            style="background-color: rgb(35, 35, 53);" />
+          <button type="button" class="show-password" aria-label="Show password"
+            style="margin-right: 10px ;">👁️</button>
+        </div>
+
+        <div class="row-between">
+          <label class="checkbox-inline">
+            <input id="remember" type="checkbox" /> Remember me
+          </label>
+          <a href="#" class="link-small">Forgot?</a>
+        </div>
+
+        <div class="form-msg" id="signinMsg" role="alert" aria-live="polite"></div>
+
+        <button type="submit" class="btn-auth primary">Sign In</button>
+      </form>
+
+      <p class="muted" style="text-align: center;">Or</p>
+      <div class="social-row">
+        <button class="btn-auth social">Continue with Google</button>
+        <button class="btn-auth social">Continue with Facebook</button>
+      </div>
+
+      <p class="fineprint"></p>
+    </section>
+  </main>
+  <hr>
+  <footer class="footer">
+    <p class="align">Thank you for visiting Truth Or Dare Online!</p>
+    <p class="align">&copy; 2025 Truth Or Dare Online. All rights reserved.</p>
+  </footer>
+
+  <script src="sign.js"></script>
+</body>
+
+</html>

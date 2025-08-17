@@ -1,0 +1,13 @@
+{
+  "name": "truth-dare-app",
+  "version": "1.0.0",
+  "description": "Truth or Dare game with frontend + backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+

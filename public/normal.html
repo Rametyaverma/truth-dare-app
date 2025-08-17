@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truth&Dare</title>
+    <link rel="stylesheet" href="normal.css">
+</head>
+
+<body>
+    <header class="top">
+        <div class="top-left">
+            <img src="logobottle.png" alt="logobottle" class="bottle-logo">
+            <p class="head-t-d">Truth Or Dare Online</p>
+
+        </div>
+
+        <div class="top-right">
+            <a href="/signin" class="nav-btn">Sign In</a>
+            <a href="/signup" class="nav-btn primary">Sign Up</a>
+            <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">Online</a></li>
+                <li><a href="#">Truth or Dares</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="/signin" class="nav-btn " id="drop-hide">Sign In</a></li>
+                <li><a href="/signup" class="nav-btn primary" id="drop-hide">Sign Up</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="container">
+
+
+        <!-- Game Section -->
+        <div class="left-panel">
+            <div class="top-bar">
+                <span class="logo">✨ Normal Truth or Dares</span>
+                <div class="buttons">
+                    <button class="btn play-online">Play <br>Online</button>
+                    <button class="btn share">Share</button>
+                </div>
+            </div>
+            <!-- Left Panel -->
+            <div class="bottom-bar">
+
+
+                <br><br><br><br><br><br><br>
+                <p class="player-heading">Player 1 Choose</p>
+                <p class="generated-t-d">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><br><br><br><br><br>
+                <div class="action-buttons">
+                    <button class="btn next-player">Next Player</button><br>
+                    <div class="t-d-btn">
+                        <button class="btn truth">Truth</button>
+                        <button class="btn dare">Dare</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-right">
+            <div class="players-panel">
+                <div class="players-title">
+                    <span class="count">Players - 3</span>
+                    <label class="switch">
+                        <input type="checkbox" id="togglePlayers" checked />
+                        <span class="slider round" id="sliderText">Off</span>
+                    </label>
+                </div>
+                <div class="players-list">
+                    <div class="player-row">
+                        <input type="text" value="Player 1"   class="player-input"/>
+                        <button class="delete-btn">X</button>
+                    </div>
+                    <div class="player-row">
+                        <input type="text" value="Player 2" class="player-input"/>
+                        <button class="delete-btn">×</button>
+                    </div>
+                    <div class="player-row">
+                        <input type="text" value="Player 3" class="player-input"/>
+                        <button class="delete-btn">×</button>
+                    </div>
+                    
+                </div>
+
+                <button class="add-btn">+ Add</button>
+            </div>
+
+            <div class="game-description">
+                <h3>Normal truth or dares</h3>
+                <p>
+                    Play <strong>Normal</strong> Truth or Dares online.<br />
+                    Normal questions contain sentences that are suitable for people of almost all ages.<br />
+                    Such entertaining Truth or Dare category help you build new relationships, as well as
+                    friendships.<br />
+                    Click To Truth or Dare to continue and generate new text.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <script src="normal.js"></script>
+</body>
+
+</html>

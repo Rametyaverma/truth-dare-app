@@ -1,0 +1,575 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1224;
+  color: white;
+  padding-top: 80px; /* Avoid overlap with fixed top bar */
+}
+
+/* Top header bar */
+.top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(73, 1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+/* Hide top-right on large screens */
+@media (min-width: 769px) {
+  .top-right {
+    display: none !important;
+  }
+}
+
+/* Show top-right on small screens */
+@media (max-width: 768px) {
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+/* Left section of top bar */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Logo inside top-left */
+.bottle-logo {
+  height: 60px;
+}
+
+/* Center heading */
+.top p {
+  color: white;
+  font-size: 18px;
+  font-weight: 550;
+  margin: 0;
+  text-align: center;
+}
+
+/* Right section of top bar (Sign in, Sign up) */
+.top-right {
+  gap: 10px;
+}
+
+/* Dropdown menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Nav bar styling */
+.header-nav {
+  background-color: #1e1e2f;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Buttons */
+.nav-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid red;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: red;
+}
+
+.nav-btn.primary {
+  background-color: rgb(215, 19, 19);
+  border: none;
+}
+
+.nav-btn.primary:hover {
+  background-color: darkred;
+}
+
+/* Navigation links */
+.header-nav {
+  background-color: #0d1224;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #cfd3db;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.header-nav ul li a.active,
+.header-nav ul li a:hover {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Icon in download link */
+.nav-icon {
+  height: 18px;
+  width: 18px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+/* Layout container */
+.container {
+  display: flex;
+  
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 40px; /* Reduced gap for better UI */
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+/* Button Style */
+.game-button {
+  all: unset;
+  background-color: #1a1f33;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.game-button:hover {
+  transform: translateY(-3px);
+  background-color: #222845;
+}
+
+.game-button.single {
+  justify-content: space-between;
+}
+
+/* Icons */
+.img {
+  height: 45px;
+  width: 45px;
+}
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 48%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel h1 {
+  font-size: 28px;
+}
+
+.right-panel h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.right-panel p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+
+/* How-to-play section */
+.how-to-play {
+  margin-top: 10px;
+  color: #d1d1d1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.how-to-play h2 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.how-to-play ol {
+  padding-left: 20px;
+}
+
+.how-to-play li {
+  margin-bottom: 10px;
+}
+
+.how-to-play li strong {
+  color: #ffffff;
+}
+
+.how-to-play .reminder {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Fluid font scaling */
+html {
+  font-size: 100%;
+}
+@media (max-width: 1200px) {
+  html { font-size: 95%; }
+}
+@media (max-width: 992px) {
+  html { font-size: 90%; }
+}
+@media (max-width: 768px) {
+  html { font-size: 85%; }
+}
+@media (max-width: 576px) {
+  html { font-size: 80%; }
+}
+
+/* Responsive layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3rem 5%;
+}
+.left-panel,
+.right-panel {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+@media (max-width: 992px) {
+  .container { margin-top: 4rem; }
+  .left-panel, .right-panel {
+    flex: 1 1 100%;
+  }
+}
+
+.game-button {
+  padding: 1.25em 1em;
+  font-size: 1rem;
+}
+.img {
+  width: auto;
+  height: 3.5em;
+}
+
+/* Scaling typography */
+.right-panel h1 {
+  font-size: 2rem;
+}
+.right-panel h2 {
+  font-size: 1.5rem;
+}
+.right-panel p,
+.how-to-play,
+.how-to-play li {
+  font-size: 1rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  /* Hide normal nav */
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 100%; /* dropdown now appears below icon */
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    border: 1px solid #333;
+    z-index: 999;
+  }
+
+  /* Dropdown visible */
+  .header-nav.show {
+    display: flex;
+  }
+  #drop-hide{
+    display: none;
+  }
+  .header-nav ul {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  /* Remove Sign in/Sign up from dropdown */
+  .header-nav ul li.auth-link {
+    display: none;
+  }
+
+  /* Arrange top bar */
+  .top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    height: auto;
+  }
+
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Menu toggle (hamburger) positioning */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Buttons remain visible on the right */
+  .nav-btn {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+}
+
+/* Ultra-small screens */
+@media (max-width: 576px) {
+  html { font-size: 75%; }
+  .game-button {
+    padding: 1em;
+    font-size: .9rem;
+  }
+  .right-panel h1 { font-size: 1.75rem; }
+  .right-panel h2 { font-size: 1.3rem; }
+  .img {
+    height: 3em;
+    width: 3em;
+  }
+  .how-to-play li {
+    font-size: .95rem;
+  }
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  background-color: #1a1f33;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 13px;
+    padding: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    
+    
+    background-color: rgb(203, 47, 47);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000; */
+/* } */
+
+/* Left section of top bar */
+/* .top-left {
+    display: flex;
+    align-items: center;
+} */
+
+/* Logo inside top-left */
+/* .bottle-logo {
+    height: 60px;
+    margin-right: 10px;
+} */
+
+/* Center heading */
+/* .top p {
+    color: white;
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0;
+    flex-grow: 1;
+
+    text-align: center;
+} */
+
+
+
+
+
+
+
+/* Navigation links */
+/* .header-nav {
+  background-color: #0d1224;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid red;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: red;
+}
+
+.nav-btn.primary {
+  background-color: red;
+  border: none;
+}
+
+.nav-btn.primary:hover {
+  background-color: darkred;
+} */
+
+
+/* .header-nav ul li a {
+  text-decoration: none;
+  color: #cfd3db;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.header-nav ul li a.active,
+.header-nav ul li a:hover {
+  font-weight: 600;
+  color: #ffffff;
+} */
+
+/* Icon in download link */
+/* .nav-icon {
+  height: 18px;
+  width: 18px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+} */

@@ -1,0 +1,467 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d1224;
+  color: white;
+  padding: 20px;
+}
+/* Top header bar */
+.top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    width: 100%;
+    
+    
+    background-color: rgb(203, 47, 47);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Left section of top bar */
+.top-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo inside top-left */
+.bottle-logo {
+    height: 60px;
+    margin-right: 10px;
+}
+
+/* Center heading */
+.top p {
+    color: white;
+    font-size: 18px;
+    font-weight: 550;
+    margin: 0;
+    flex-grow: 1;
+
+    text-align: center;
+}
+
+
+/* Just Checking */
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1e1e2f;
+  padding: 10px 20px;
+  position: relative;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Nav bar styling */
+.header-nav {
+  background-color: #1e1e2f;
+}
+
+.header-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.header-nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Buttons */
+.nav-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid red;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: red;
+}
+
+.nav-btn.primary {
+  background-color: red;
+  border: none;
+}
+
+.nav-btn.primary:hover {
+  background-color: darkred;
+}
+
+
+
+
+
+
+/* Navigation links */
+.header-nav {
+  background-color: #0d1224;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.header-nav ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-btn {
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 1px solid red;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: red;
+}
+
+.nav-btn.primary {
+  background-color: red;
+  border: none;
+}
+
+.nav-btn.primary:hover {
+  background-color: darkred;
+}
+
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #cfd3db;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.header-nav ul li a.active,
+.header-nav ul li a:hover {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Icon in download link */
+.nav-icon {
+  height: 18px;
+  width: 18px;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg);
+}
+
+
+.container {
+  display: flex;
+  margin-top: 80px;
+  margin-left: 5%;
+  margin-right: 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  width: 47%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button-row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+
+/* Button Style */
+.game-button {
+  all: unset; /* Reset default button styles */
+  background-color: #1a1f33;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.game-button:hover {
+  transform: translateY(-3px);
+  background-color: #222845;
+}
+
+.game-button.single {
+  justify-content: space-between;
+}
+
+/* Icons */
+.img {
+  height: 45px;
+  width: 45px;
+}
+
+
+
+/* RIGHT PANEL */
+.right-panel {
+  width: 48%;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.right-panel h1 {
+  font-size: 28px;
+}
+
+.right-panel h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.right-panel p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfcf;
+}
+/* How-to-play section */
+.how-to-play {
+  margin-top: 10px;
+  padding: 0;
+  /* background-color: #12172b; */
+  /* border-radius: 12px; */
+  color: #d1d1d1;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.how-to-play h2 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.how-to-play ol {
+  padding-left: 20px;
+}
+
+.how-to-play li {
+  margin-bottom: 10px;
+}
+
+.how-to-play li strong {
+  color: #ffffff;
+}
+
+.how-to-play .reminder {
+  margin-top: 18px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+
+
+
+
+
+/* 1. Fluid base font scaling */
+html {
+  font-size: 100%;
+}
+@media (max-width: 1200px) {
+  html { font-size: 95%; }
+}
+@media (max-width: 992px) {
+  html { font-size: 90%; }
+}
+@media (max-width: 768px) {
+  html { font-size: 85%; }
+}
+@media (max-width: 576px) {
+  html { font-size: 80%; }
+}
+
+/* 2. Make layout flexible */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 5rem 5%;
+}
+.left-panel,
+.right-panel {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+/* 3. Responsive adjustments */
+@media (max-width: 992px) {
+  .container { margin-top: 6rem; }
+  .left-panel, .right-panel {
+    flex: 1 1 100%;
+  }
+}
+
+.game-button {
+  padding: 1.25em 1em;
+  font-size: 1rem;
+}
+.img {
+  width: auto;
+  height: 3.5em;
+}
+
+/* 4. Scaling typography */
+.right-panel h1 {
+  font-size: 2rem;
+}
+.right-panel h2 {
+  font-size: 1.5rem;
+}
+.right-panel p,
+.how-to-play,
+.how-to-play li {
+  font-size: 1rem;
+}
+
+/* 5. Hide navigation on small devices */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    flex-direction: column;
+    background-color: #1e1e2f;
+    border: 1px solid #333;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .header-nav.show {
+    display: flex;
+  }
+
+
+
+
+  .top {
+    flex-direction: column;
+    padding: 1rem;
+    height: auto;
+  }
+  .bottle-logo {
+    height: 3.5em;
+    margin-bottom: .5em;
+  }
+  .top p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* 6. Ultra-small screens fine-tuning */
+@media (max-width: 576px) {
+  html { font-size: 75%; }
+  .game-button {
+    padding: 1em;
+    font-size: .9rem;
+  }
+  .right-panel h1 { font-size: 1.75rem; }
+  .right-panel h2 { font-size: 1.3rem; }
+  .img {
+    height: 3em;
+    width: 3em;
+  }
+  .how-to-play li {
+    font-size: .95rem;
+  }
+}
+
+
+
+.footer {
+  margin-top: 40px;
+  background-color: #1a1f33;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 13px;
+    padding: 16px;
+  }
+}
+
+
+
+
